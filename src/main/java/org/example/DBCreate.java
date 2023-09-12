@@ -6,6 +6,10 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.sql.Statement;
 
+/**
+ * BDCreate - класс формирования базы данных DBLibrary
+ *
+ */
 public class DBCreate {
     final static String url = "jdbc:postgresql://localhost/?";
     final static String login = "postgres";
@@ -83,12 +87,27 @@ public class DBCreate {
     private final static String sql_ins_role2= """
                                                 INSERT INTO table_role(role) VALUES ('Пользователь');
                                                 """;
+
+    /**
+     * DBDriver() - Проверка доступности драйвера для postgresql
+     * @throws ClassNotFoundException
+     */
     static void DBDriver() throws ClassNotFoundException {
         //Драйвер postgresql загружен
         System.out.println("Проверка доступности драйвера: postgresql");
         Class.forName("org.postgresql.Driver");
         System.out.println("Драйвер доступен");
     }
+
+    /**
+     * QuerySql - функция выполнения запроса в базу данных
+     * @param connect - подключение к БД
+     * @param sql - запрос
+     * @param info - информация
+     * @param name - обрабатываемая таблица или данные
+     * @return - возврат результата работы запроса
+     * @throws SQLException
+     */
     private static int QuerySql(Connection connect,String sql,String info,String name) throws SQLException {
         System.out.print(info+name);
         Statement statement = connect.createStatement();
@@ -96,6 +115,12 @@ public class DBCreate {
         System.out.println(" ...OK");
         return result;
     }
+
+    /**
+     * DBCreate - Создание структуры БД библиотеки и тестовых пользователей
+     * @return - возврат результатов выполнения запросов
+     * @throws SQLException
+     */
     static int DBCreate() throws SQLException {
         System.out.println("Проверка доступности базы данных: LabraryDB");
         //Выполняем соединение с postgresql
