@@ -1,1 +1,1 @@
-![ERD](./IMG/ERD.png)
+![ERD](https://github.com/Ilya93L/JavaJDBCLibrary/blob/master/IMG/ER.png?raw=true)
