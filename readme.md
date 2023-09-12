@@ -1,1 +1,1 @@
-![ERD](./ERD.png)
+![ERD](./IMG/ERD.png)
