@@ -1,1 +1,1 @@
-![alt text](ERD.png)
+![ERD](./ERD.png)
