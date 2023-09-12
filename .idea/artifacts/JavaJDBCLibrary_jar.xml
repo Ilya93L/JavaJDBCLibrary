@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="JavaJDBCLibrary:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/JavaJDBCLibrary_jar</output-path>
+    <root id="archive" name="JavaJDBCLibrary.jar">
+      <element id="module-output" name="JavaJDBCLibrary" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/postgresql/postgresql/42.2.1/postgresql-42.2.1.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>

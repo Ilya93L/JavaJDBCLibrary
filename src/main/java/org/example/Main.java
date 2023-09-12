@@ -15,11 +15,7 @@ public class Main {
         }
 
         try {   //Проверка существования Базы данных LabraryDB
-            if (DBCreate.DBCreate()!=0)
-            {
-               System.err.println("Ошибка!Завершение работы программы");
-                return;
-            }
+            DBCreate.DBCreate();
         } catch (SQLException e) {
             System.err.println(e);
         }
